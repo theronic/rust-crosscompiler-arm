@@ -16,5 +16,7 @@ script:
   - docker build -t dlecan/rust-crosscompiler-arm:stable arm
 
 after_success:
-  - docker login -e "$DOCKER_EMAIL" -u "$DOCKER_USER" -p "$DOCKER_PASSWORD"
-  - docker push dlecan/rust-crosscompiler-arm
+  - docker login -u $DOCKER_USER" -p "$DOCKER_PASSWORD" && docker push dlecan/rust-crosscompiler-arm
+  
+  
+
