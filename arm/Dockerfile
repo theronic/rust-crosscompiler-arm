@@ -18,7 +18,7 @@ COPY arm/include/arm-linux-gnueabihf-gcc-with-link-search /usr/local/sbin/
 COPY arm/include/arm-linux-gnueabihf-g++-with-link-search /usr/local/sbin/
 COPY arm/include/fixQualifiedLibraryPaths.sh /usr/local/sbin/
 COPY arm/include/cargo /usr/local/sbin/
-COPY aram/include/sources.list /etc/apt/
+COPY arm/include/sources.list /etc/apt/
 #COPY arm/include/sources-armhf.list /etc/apt/sources.list.d/
 
 RUN mv /tmp/.cargo $HOME && \
