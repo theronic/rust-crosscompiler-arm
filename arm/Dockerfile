@@ -23,7 +23,7 @@ COPY arm/include/sources.list /etc/apt/
 
 RUN mv /tmp/.cargo $HOME && \
   dpkg --add-architecture armhf && \
-  apt-key adv --recv-keys --keyserver keys.gnupg.net 9165938D90FDDD2E && \
+  apt-key adv --recv-keys --keyserver hkp://keys.gnupg.net:80 9165938D90FDDD2E && \
   apt-get update && \
   DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
     build-essential \
