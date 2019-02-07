@@ -13,13 +13,13 @@ ENV ROOT_FS /
 ENV OBJCOPY $CC_DIR/arm-linux-gnueabihf-objcopy
 ENV PKG_CONFIG_ALLOW_CROSS 1
 
-COPY include/config /tmp/.cargo/
-COPY include/arm-linux-gnueabihf-gcc-with-link-search /usr/local/sbin/
-COPY include/arm-linux-gnueabihf-g++-with-link-search /usr/local/sbin/
-COPY include/fixQualifiedLibraryPaths.sh /usr/local/sbin/
-COPY include/cargo /usr/local/sbin/
-COPY include/sources.list /etc/apt/
-#COPY include/sources-armhf.list /etc/apt/sources.list.d/
+COPY arm/include/config /tmp/.cargo/
+COPY arm/include/arm-linux-gnueabihf-gcc-with-link-search /usr/local/sbin/
+COPY arm/include/arm-linux-gnueabihf-g++-with-link-search /usr/local/sbin/
+COPY arm/include/fixQualifiedLibraryPaths.sh /usr/local/sbin/
+COPY arm/include/cargo /usr/local/sbin/
+COPY aram/include/sources.list /etc/apt/
+#COPY arm/include/sources-armhf.list /etc/apt/sources.list.d/
 
 RUN mv /tmp/.cargo $HOME && \
   dpkg --add-architecture armhf && \
